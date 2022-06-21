@@ -12,7 +12,6 @@
     }
     todos = JSON.parse(todosFromLS);
   });
-  $:localStorage.setItem('todos', JSON.stringify(todos))
 </script>
 
 <main>
