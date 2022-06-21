@@ -2,24 +2,15 @@
 setup: |
   import Layout from '../../layouts/BlogPost.astro'
   import Cool from '../../components/Author.astro'
-  import App from "../../components/App.svelte"
-title: Hello world!
-publishDate: 12 Sep 2021
-name: Nate Moore
-value: 128
+  import Todo from "../../components/svelte/Todo.svelte"
+title: Making a todo app with svelte
+publishDate: 21 June 2022
+name: Ken Ramiscal
+author: Ken Ramiscal
 description: Just a Hello World Post!
 ---
 
-<Cool name={frontmatter.name} href="https://twitter.com/n_moore" client:load />
-<App client:load/>
-This is so cool!
+To understand what we're building today, let's see it first:
 
-Do variables work {frontmatter.value * 2}?
+<Todo client:load />
 
-```css
-/* asdfasr */
-.root {
-  background:black;
-}
-
-```
