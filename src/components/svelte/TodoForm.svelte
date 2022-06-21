@@ -12,6 +12,7 @@
   }
   todos = [...todos, todoToAdd]
   todoText = ""
+  localStorage.setItem('todos', JSON.stringify(todos))
 }}>
   <label for="todo-text" >todo</label>
   <input type="text" id="todo-text" name="text" bind:value={todoText}>
