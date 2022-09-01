@@ -1,0 +1,22 @@
+---
+export interface Props {
+  frontmatter: {
+    title: string;
+    createdAt: string;
+    description: string;
+  };
+}
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <title>{frontmatter.title}</title>
+    <meta name="description" content={frontmatter.description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.createdAt}</p>
+  </body>
+</html>
