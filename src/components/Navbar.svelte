@@ -6,17 +6,21 @@
 <nav
   class="p-3 flex items-center border-b-2 border-b-light-secondary dark:border-b-dark-secondary gap-4"
 >
-  <div
-    class="bg-gradient-to-r bg-clip-text font-bold text-[18px] text-transparent from-cus-blue-light to-cus-blue-dark"
-  >
-    Ken Ramiscal
+  <div>
+    <a
+      href="/"
+      class="bg-gradient-to-r bg-clip-text font-bold text-[18px] text-transparent from-cus-blue-light to-cus-blue-dark"
+    >
+      Ken Ramiscal
+    </a>
   </div>
   <div class="flex gap-2">
-    <NavItem isActive={activeTab === "about"}>About</NavItem>
-    <NavItem isActive={activeTab === "blog"}>Blog</NavItem>
+    <NavItem isActive={activeTab === "about"} navigateTo="/about">About</NavItem
+    >
+    <NavItem isActive={activeTab === "blog"} navigateTo="/blog">Blog</NavItem>
   </div>
   <div class="flex gap-3 ml-auto">
-    <NavItem type="icon-only"
+    <NavItem type="icon-only" navigateTo={"https://github.com/Kenramiscal1106"}
       ><svg
         width="24"
         height="24"
@@ -35,7 +39,7 @@
         </defs>
       </svg>
     </NavItem>
-    <NavItem type="icon-only">
+    <NavItem type="icon-only" navigateTo={"https://twitter.com/EnidlareK"}>
       <svg
         width="24"
         height="24"
