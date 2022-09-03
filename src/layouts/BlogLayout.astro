@@ -17,8 +17,8 @@ import "../styles/globals.css";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <h1 class="">{frontmatter.title}</h1>
-    <p>{frontmatter.createdAt}</p>
+    <h1 class="text-center ">{frontmatter.title}</h1>
+    <div class="text-center text-[14px]">{frontmatter.createdAt}</div>
     <article class="markdown">
       <slot />
     </article>
