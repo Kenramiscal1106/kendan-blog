@@ -1,0 +1,23 @@
+---
+import Navbar from "@components/Navbar.svelte";
+import "../styles/globals.css";
+---
+
+<html lang="en" class="dark">
+  <head>
+    <title>Blog | Ken Ramiscal</title>
+    <meta
+      name="description"
+      content="Ken Ramiscal's blog post lives here. You can find his blogs in this page."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <Navbar activeTab={"about"} />
+    <div
+      class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
+    >
+    </div>
+    <article class="markdown"></article>
+  </body>
+</html>
