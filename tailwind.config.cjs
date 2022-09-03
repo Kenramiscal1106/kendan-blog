@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         "light-primary": "hsl(0,0%,100%)",
-        "light-secondary": "hsl(220, 35%,100%)",
+        "light-secondary": "hsl(220, 35%,93%)",
         "light-content": "hsl(0,0%,9%)",
         "light-content-secondary": "hsl(0,0%,30%)",
         "dark-primary": "hsl(0, 0%, 13%)",
@@ -16,6 +16,10 @@ module.exports = {
       },
       fontFamily: {
         inter: "'Inter hosted', sans-serif",
+      },
+      gradientColorStops: {
+        "cus-blue-light": "hsl(201, 100%, 48%)",
+        "cus-blue-dark": "hsl(220, 52%, 42%)",
       },
     },
   },
