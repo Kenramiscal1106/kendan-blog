@@ -10,15 +10,17 @@ const { frontmatter } = Astro.props;
 import "../styles/globals.css";
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <title>{frontmatter.title}</title>
     <meta name="description" content={frontmatter.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <h1 class="text-5xl">{frontmatter.title}</h1>
+    <h1 class="">{frontmatter.title}</h1>
     <p>{frontmatter.createdAt}</p>
-    <slot />
+    <article class="markdown">
+      <slot />
+    </article>
   </body>
 </html>
