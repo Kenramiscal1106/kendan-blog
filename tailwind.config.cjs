@@ -14,6 +14,9 @@ module.exports = {
         "dark-content": "hsl(0, 0%, 100%)",
         "dark-content-secondary": "hsl(220, 12%, 70%)",
       },
+      fontFamily: {
+        inter: "'Inter hosted', sans-serif",
+      },
     },
   },
   plugins: [],
