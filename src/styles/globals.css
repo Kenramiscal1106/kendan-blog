@@ -9,7 +9,7 @@
 }
 @layer base{
 	* {
-		@apply text-light-content dark:text-dark-content;
+		@apply text-light-content dark:text-dark-content font-inter;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		@apply font-bold;
@@ -19,7 +19,7 @@
 	h3 {@apply text-2xl;}
 	h4 {@apply text-xl;}
 	h5 {@apply text-lg;}
-	h6 {@apply text-base;}
+	p, h6 {@apply text-base;}
 	body {
 		@apply bg-light-primary dark:bg-dark-primary;
 	}
