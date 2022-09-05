@@ -1,0 +1,55 @@
+---
+import Navbar from "@components/Navbar.svelte";
+import SetTheme from "@components/SetTheme.astro";
+import "../styles/globals.css";
+const recentBlogs = await Astro.glob("../pages/blog/*.md");
+---
+
+<html lang="en">
+  <head>
+    <title>Ken Ramiscal</title>
+    <meta
+      name="description"
+      content="Ken Ramiscal's blog post lives here. You can find his blogs in this page."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SetTheme />
+  </head>
+  <body>
+    <Navbar client:load />
+    <div class="flex gap-7 items-center m-auto justify-center">
+      <img
+        src="/assets/profile.png"
+        class="max-w-[250px] rounded-[100%]"
+        alt="profile"
+      />
+      <div>
+        <h1
+          class="bg-gradient-to-br from-cus-blue-light to-cus-blue-dark bg-clip-text text-transparent"
+        >
+          Ken Ramiscal
+        </h1>
+        <h3>
+          <span
+            class="bg-gradient-to-br from-cyan-500 to-green-600 bg-clip-text text-transparent"
+            >web developer</span
+          > and <span
+            class="bg-gradient-to-br from-orange-400 to-red-600 bg-clip-text text-transparent"
+            >web designer</span
+          >
+        </h3>
+        <div>
+          making people realize that coding is fun and you should try it.
+        </div>
+      </div>
+    </div>
+    <div class="mt-5">
+      <h3
+        class="bg-gradient-to-br from-cus-blue-light to-cus-blue-dark bg-clip-text text-transparent text-center"
+      >
+        Recent posts
+        {recentBlogs.map((blog) => <h4>{blog.frontmatter.title}</h4>)}
+      </h3>
+    </div>
+  </body>
+</html>
