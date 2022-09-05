@@ -24,3 +24,9 @@
 		@apply bg-light-primary dark:bg-dark-primary;
 	}
 }
+.markdown > p {
+	@apply my-4;
+}
+.markdown > code * {
+	@apply font-["Cascadia_Code"];
+}
