@@ -23,20 +23,24 @@ import "../styles/globals.css";
   </head>
   <body>
     <Navbar client:load />
-    <h1 class="text-center">{frontmatter.title}</h1>
-    <div
-      class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
-    >
-      {frontmatter.createdAt} • {frontmatter.durationReadInMins + " mins read"}
-    </div>
-    <div
-      style={"background-image:url('" + frontmatter.imageURL + "')"}
-      class="max-w-sm aspect-video bg-cover m-auto"
-    >
-    </div>
-    <!-- <img src={frontmatter.imageURL} alt="main blog image" class="max-w-" /> -->
-    <article class="markdown">
-      <slot />
-    </article>
+    <main class="mt-20">
+      <h1 class="text-center">{frontmatter.title}</h1>
+      <div
+        class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
+      >
+        {frontmatter.createdAt} • {
+          frontmatter.durationReadInMins + " mins read"
+        }
+      </div>
+      <div
+        style={"background-image:url('" + frontmatter.imageURL + "')"}
+        class="max-w-3xl aspect-[2/1] bg-cover mx-auto my-4 rounded-xl"
+      >
+      </div>
+      <!-- <img src={frontmatter.imageURL} alt="main blog image" class="max-w-" /> -->
+      <article class="markdown max-w-3xl m-auto">
+        <slot />
+      </article>
+    </main>
   </body>
 </html>
