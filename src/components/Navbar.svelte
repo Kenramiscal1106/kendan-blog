@@ -5,7 +5,7 @@
 </script>
 
 <nav
-  class="p-3 flex items-center border-b-2 border-b-light-secondary dark:border-b-dark-secondary gap-4"
+  class="fixed top-0 w-full p-3 flex items-center border-b-2 border-b-light-secondary dark:border-b-dark-secondary gap-4  bg-light-primary dark:bg-dark-primary"
 >
   <div>
     <a
