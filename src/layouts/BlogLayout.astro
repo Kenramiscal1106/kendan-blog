@@ -4,6 +4,8 @@ export interface Props {
     title: string;
     createdAt: string;
     description: string;
+    durationReadInMins: number;
+    imageURL: string;
   };
 }
 const { frontmatter } = Astro.props;
@@ -25,8 +27,14 @@ import "../styles/globals.css";
     <div
       class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
     >
-      {frontmatter.createdAt}
+      {frontmatter.createdAt} • {frontmatter.durationReadInMins + " mins read"}
     </div>
+    <div
+      style={"background-image:url('" + frontmatter.imageURL + "')"}
+      class="max-w-sm aspect-video bg-cover m-auto"
+    >
+    </div>
+    <!-- <img src={frontmatter.imageURL} alt="main blog image" class="max-w-" /> -->
     <article class="markdown">
       <slot />
     </article>
