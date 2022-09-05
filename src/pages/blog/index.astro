@@ -1,9 +1,10 @@
 ---
 import Navbar from "@components/Navbar.svelte";
+import SetTheme from "@components/SetTheme.astro";
 import "../../styles/globals.css";
 ---
 
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <title>Blog | Ken Ramiscal</title>
     <meta
@@ -11,9 +12,10 @@ import "../../styles/globals.css";
       content="Ken Ramiscal's blog post lives here. You can find his blogs in this page."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SetTheme />
   </head>
   <body>
-    <Navbar activeTab={"blog"} />
+    <Navbar activeTab={"blog"} client:load />
     <div
       class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
     >
