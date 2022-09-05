@@ -11,7 +11,7 @@
     : "_self"}
   class={`${
     type === "text" ? "px-3 py-2" : "p-2"
-  } rounded-lg text-light-content fill-current dark:text-dark-content ${
+  } rounded-lg text-light-content fill-current dark:text-dark-content transition-all duration-100 ${
     isActive
       ? "bg-[#dde3ee] dark:bg-[#343842] font-semibold"
       : "hover:bg-light-secondary dark:hover:bg-dark-secondary active:bg-[#dde3ee] active:dark:bg-[#343842]"
