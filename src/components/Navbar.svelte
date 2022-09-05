@@ -1,5 +1,6 @@
 <script lang="ts">
   import NavItem from "./NavItem.svelte";
+  import ThemeToggle from "./ThemeToggle.svelte";
   export let activeTab: "home" | "about" | "blog" = "home";
 </script>
 
@@ -51,5 +52,6 @@
         />
       </svg>
     </NavItem>
+    <ThemeToggle />
   </div>
 </nav>
