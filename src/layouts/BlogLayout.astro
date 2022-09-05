@@ -8,17 +8,19 @@ export interface Props {
 }
 const { frontmatter } = Astro.props;
 import Navbar from "@components/Navbar.svelte";
+import SetTheme from "@components/SetTheme.astro";
 import "../styles/globals.css";
 ---
 
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <title>{frontmatter.title}</title>
     <meta name="description" content={frontmatter.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SetTheme />
   </head>
   <body>
-    <Navbar />
+    <Navbar client:load />
     <h1 class="text-center">{frontmatter.title}</h1>
     <div
       class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
