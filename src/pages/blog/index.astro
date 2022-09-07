@@ -1,7 +1,19 @@
 ---
+import BlogArticle from "@components/BlogArticle.astro";
 import Navbar from "@components/Navbar.svelte";
 import SetTheme from "@components/SetTheme.astro";
 import "../../styles/globals.css";
+const blogPosts = await Astro.glob("./*.md");
+const blogFrontmatter = blogPosts.map(
+  (blogPost) =>
+    blogPost.frontmatter as {
+      title: string;
+      createdAt: string;
+      description: string;
+      durationReadInMins: number;
+      imageURL: string;
+    }
+);
 ---
 
 <html lang="en">
@@ -20,6 +32,6 @@ import "../../styles/globals.css";
       class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
     >
     </div>
-    <article class="markdown"></article>
+    {blogFrontmatter.map((blogPost) => <BlogArticle {...blogPost} />)}
   </body>
 </html>
