@@ -28,10 +28,8 @@ const blogFrontmatter = blogPosts.map(
   </head>
   <body>
     <Navbar activeTab={"blog"} client:load />
-    <div
-      class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
-    >
-    </div>
-    {blogFrontmatter.map((blogPost) => <BlogArticle {...blogPost} />)}
+    <main class="mt-20">
+      {blogFrontmatter.map((blogPost) => <BlogArticle {...blogPost} />)}
+    </main>
   </body>
 </html>
