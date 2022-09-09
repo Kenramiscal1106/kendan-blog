@@ -1,12 +1,37 @@
 ---
+export interface Props {
+  title: string;
+  createdAt: string;
+  description: string;
+  durationReadInMins: number;
+  imageURL: string;
+}
+
 const { title, createdAt, description, durationReadInMins, imageURL } =
   Astro.props;
+const date = new Intl.DateTimeFormat("en-PH", {
+  dateStyle: "medium",
+}).format(new Date(createdAt));
+const titleSlug = title
+  .replace(/\(|\)/g, "")
+  .toLowerCase()
+  .split(" ")
+  .join("-");
 ---
 
-<img src={imageURL} alt={"main blog image" + title} />
-<div>
-  <h4>{title}</h4>
-  <div>
-    {new Date(createdAt)}
-  </div>
-</div>
+<a href={"/blog/" + titleSlug}>
+  <article class="flex gap-4 max-w-2xl">
+    <img src={imageURL} alt={"main blog image" + title} class="h-auto w-32" />
+    <div>
+      <h4>{title}</h4>
+      <div>
+        {date} | {durationReadInMins} mins read
+      </div>
+      <p
+        class="text-light-content-secondary dark:text-dark-content-secondary text-xs"
+      >
+        {description}
+      </p>
+    </div>
+  </article>
+</a>
