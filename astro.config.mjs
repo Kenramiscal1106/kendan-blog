@@ -16,4 +16,9 @@ export default defineConfig({
   server: {
     port: 8080,
   },
+  markdown: {
+    shikiConfig: {
+      theme: "one-dark-pro",
+    },
+  },
 });
