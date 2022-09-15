@@ -20,8 +20,12 @@ const titleSlug = title
 ---
 
 <a href={"/blog/" + titleSlug}>
-  <article class="flex gap-4 max-w-2xl">
-    <img src={imageURL} alt={"main blog image" + title} class="h-auto w-32" />
+  <article class="flex md:flex-row flex-col gap-4 max-w-2xl">
+    <img
+      src={imageURL}
+      alt={"main blog image" + title}
+      class="md:h-auto md:w-32 w-full h-auto"
+    />
     <div>
       <h4>{title}</h4>
       <div>
