@@ -9,7 +9,7 @@
 }
 @layer base{
 	* {
-		@apply text-light-content dark:text-dark-content font-inter;
+		@apply text-light-content dark:text-dark-content font-inter selection:text-light-accent selection:bg-light-accent selection:bg-opacity-10 dark:selection:text-dark-accent ;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		@apply font-bold;
@@ -35,4 +35,7 @@
 }
 .markdown > *:not(pre) code {
 	@apply px-1 rounded-sm bg-light-secondary dark:bg-dark-secondary;
+}
+.markdown a {
+	@apply underline text-light-accent dark:text-dark-accent;
 }
