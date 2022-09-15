@@ -13,6 +13,8 @@ module.exports = {
         "dark-secondary": "hsl(220, 12%, 20%)",
         "dark-content": "hsl(0, 0%, 100%)",
         "dark-content-secondary": "hsl(220, 12%, 70%)",
+        "dark-accent": "hsl(201, 100%, 50%)",
+        "light-accent": "hsl(220, 100%, 40%)",
       },
       fontFamily: {
         inter: "'Inter hosted', sans-serif",
