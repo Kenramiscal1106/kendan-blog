@@ -5,12 +5,12 @@
 </script>
 
 <nav
-  class="fixed top-0 w-full p-3 flex items-center border-b-2 border-b-light-secondary dark:border-b-dark-secondary gap-4  bg-light-primary dark:bg-dark-primary"
+  class="fixed top-0 w-full p-3 flex items-center gap-4  bg-light-primary dark:bg-dark-primary  dark:shadow-dark-secondary/60 shadow-md shadow-light-secondary"
 >
   <div>
     <a
       href="/"
-      class="bg-gradient-to-r bg-clip-text font-bold text-[18px] text-transparent from-cus-blue-light to-cus-blue-dark"
+      class="text-light-accent dark:text-dark-accent font-bold text-[1.1rem]"
     >
       Ken Ramiscal
     </a>
