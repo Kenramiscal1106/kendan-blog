@@ -29,7 +29,7 @@ const blogFrontmatter = blogPosts.map(
   <body>
     <Navbar activeTab={"blog"} client:load />
     <main class="mt-20">
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-3 md:w-max mx-auto">
         {blogFrontmatter.map((blogPost) => <BlogArticle {...blogPost} />)}
       </div>
     </main>
