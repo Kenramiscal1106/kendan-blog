@@ -6,17 +6,24 @@ description: Lorem ipsum dolor
 durationReadInMins: 15
 imageURL: https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
 ---
-So, I started coding on January 2020. I got curious on how webpages work and I remembered once on how I got so confused and amused at how these gibberish letters with `<h1>Hello, world</h1>` outputs a result on a web browser. It was interesting for me at the time and I also really like to code. 
+### January 2020
+As far as I remember, it all began on the January 2020. I was curious on how webpages work and I was interested to learn how to also make them. 
 
-And also at that time, I see grade 8 students writing *code* in the library and when they hit save, they get pretty interesting results. Back then, I was introduced to html. And I got really excited learning it. Ever since that day, I would go to  the [w3schools](https://w3schools.com) website just to learn all about html. And then, I showed off to a bunch of my classmates how I can change the text of a website. 
+And it was also at that time that I saw grade 8 students writing *some gibberish* phrases in the library and when they saved and reload the website, they got pretty interested at the result the code gave. And so, I picked up the motivation needed to learn those weird looking code. Then, after that, everytime I would go to the library to learn how to code in HTML. And after I've learned enough of it, I showed my classmates how I can change the text of a website. 
 
-But comparing my knowledge at that time to my knowledge about coding today, the comparison would be like a 2-story apartment to a 30-story hotel. Back then, I was learning too little and I realized that most of the things that I created using barebones HTML was nothing compared to the ones like messenger, facebook, youtube, and all that kind of stuff because really looks ugly. So, I started learning on how to style the gibberish elements that I display on the page while coding. And I found out about css.
+But comparing my knowledge at that time to my knowledge about coding today, the comparison would be like a 2-story apartment to a 30-story hotel. Back then, I was learning too little and I realized that most of the things that I created using barebones HTML was nothing compared to the ones like messenger, facebook, youtube, and all that kind of stuff because it really looks ugly. So, I started learning on how to style elements that I code on the page. And I stumbled upon learning css.
 
-CSS was one of the most clear, and the most confusing when the codebase grows. And most of the time, I was just using plain css. CSS was a [[json|json-like]] styling language that has the principle of cascading. The style that was last declared in the file or `<style>` tag is the one that applies to the different styles. Of course, CSS doesn't end there. It also has specificity for styling elements. And it was such a mental overhead that I tried to quit web development. But fortunately, with a little organization and effort, I was able to make small projects with it.
+CSS was one of "**the most clear**", and just one of the "**most downright confusing**" as the codebase grows. And most of the time, I was just **"using plain css"**. CSS is a styling language that follows the principle of cascading. The style that was last declared in the file or `<style>` tag is the one that applies to the different styles. 
 
-But then I asked myself this question: if Wordpress can handle the whole website stuff, why do I need to code in html and css? And when I realized that I don't really need to code html and css, I think doing this isn't necessary. That is what led me to quit making websites and start making desktop/mobile apps, command line interfaces, and so on.
+Of course, CSS doesn't end there. It also has "**specificity for styling elements**". And it was such a mental overhead that I tried to quit web development. This is because as soon as your css grows, it would be \(*almost*\) hard to manage. But fortunately, with a little organization and effort, I was able to make small projects with it.
 
-To do that, I tried using python for programming. Python, in my opinion, is the first real programming language that I've learned. Python, has a very easy syntax that is easy to understand, very minimal way of writing code due to it having a small amount of keywords. I mean, just look at it.
+And then, I stumbled upon [Wordpress](https://en.wikipedia.org/wiki/WordPress), a [CMS](https://en.wikipedia.org/wiki/Content_management_system) or Content management system. In wordpress, you could basically design a webpage with a visual based editor rather than editing it by code. After realizing how much hours I've wasted in learning web development, I reflected on this question: if a [CMS \(Content Management System\)](https://en.wikipedia.org/wiki/Content_management_system) can handle the whole website stuff, why do I need to code in html and css? And when I realized that I don't really need to code html and css, I thought that learning it is useless. 
+
+That is what led me to quit making websites and start making desktop/mobile apps, command line interfaces, and so on.
+
+To do that, I tried using python for programming. Python, in my opinion, is the first real programming language that I've learned because HTML and CSS are **not a programming language**. Python, is so simple that is easy to understand, very minimal way of writing code due to it having a small amount of keywords.
+
+#### Example
 
 ```python
 a_variable = 20
