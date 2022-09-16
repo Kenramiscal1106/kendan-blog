@@ -31,7 +31,7 @@
 	@apply font-["Cascadia_Code",_monospace] text-sm;
 }
 .markdown > pre {
-	@apply px-4 py-2 rounded-md;
+	@apply px-4 py-2 rounded-md my-4;
 }
 .markdown > *:not(pre) code {
 	@apply px-1 rounded-sm bg-light-secondary dark:bg-dark-secondary;
