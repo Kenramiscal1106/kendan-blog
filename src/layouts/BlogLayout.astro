@@ -33,12 +33,15 @@ import "../styles/globals.css";
         }
       </div>
       <div
-        style={"background-image:url('" + frontmatter.imageURL + "')"}
+        style={typeof frontmatter.imageURL === "string"
+          ? "background-image:url('" + frontmatter.imageURL + "')"
+          : ""}
         class="max-w-3xl aspect-[2/1] bg-cover mx-auto my-4 rounded-xl"
       >
       </div>
       <!-- <img src={frontmatter.imageURL} alt="main blog image" class="max-w-" /> -->
       <article class="markdown max-w-3xl m-auto">
+        <hr />
         <slot />
       </article>
     </main>
