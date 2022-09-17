@@ -2,8 +2,8 @@
 layout: "@layouts/BlogLayout.astro"
 title: My coding Journey (part 1)
 createdAt: August 31 2022
-description: Lorem ipsum dolor
-durationReadInMins: 15
+description: What I can remember from my journey of coding
+durationReadInMins: 5
 imageURL: /assets/blog/my-coding-journey-1.png
 ---
 ### January 2020
