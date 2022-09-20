@@ -6,11 +6,29 @@ export interface Props {
   imageURL: string;
 }
 const { description, durationReadInMins, imageURL, title } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = imageURL.includes("https://")
+const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
+const metaImageURL = imageURL.includes("https://")
   ? imageURL
   : new URL(imageURL, Astro.url);
+
+const domain = Astro.url.host;
 ---
 
 <meta property="og:url" content={canonicalURL.href} />
-<meta property="og:image" content={ogImageURL} />
+<meta property="og:image" content={metaImageURL} />
+<meta property="og:type" content="article" />
+<meta property="og:title" content={title} />
+<meta
+  property="og:description"
+  content={description + " | " + durationReadInMins + "mins read"}
+/>
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content={domain} />
+<meta property="twitter:url" content={canonicalURL.href} />
+<meta name="twitter:title" content={title} />
+<meta
+  name="twitter:description"
+  content={description + " | " + durationReadInMins + "mins read"}
+/>
+<meta name="twitter:image" content={metaImageURL} />
