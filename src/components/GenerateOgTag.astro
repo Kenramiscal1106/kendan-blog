@@ -1,0 +1,16 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  durationReadInMins: number;
+  imageURL: string;
+}
+const { description, durationReadInMins, imageURL, title } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = imageURL.includes("https://")
+  ? imageURL
+  : new URL(imageURL, Astro.url);
+---
+
+<meta property="og:url" content={canonicalURL.href} />
+<meta property="og:image" content={ogImageURL} />
