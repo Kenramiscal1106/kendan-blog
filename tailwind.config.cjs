@@ -17,7 +17,7 @@ module.exports = {
         "light-accent": "hsl(220, 100%, 40%)",
       },
       fontFamily: {
-        inter: "'Inter hosted', sans-serif",
+        inter: "'Inter hosted', Inter, sans-serif",
       },
       gradientColorStops: {
         "cus-blue-light": "hsl(201, 100%, 48%)",
