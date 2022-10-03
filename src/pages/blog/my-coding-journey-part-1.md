@@ -67,4 +67,16 @@ But this time, I was trying to make it more interactive. So, I tried learning Ja
 
 What is specially hard in Javascript is accessing the dom. In Javascript, you have to access the dom because it's hard to choose which type of dom accessing to use. I also got frustrated by the properties in it, such as styling and attributes. But luckily, adding click event handlers to a button is not a problem. And I tried making accordions, carousel from websites, and youtube. 
 
-And when I got frustrated with Javascript and dom, I really wanted to learn other languages. But since the online class was about to start, I stopped it for a while. Combine it with the fact that I got very distracted by anime. I just continued it in November. **Stay tuned for part 2**.
+And when I got frustrated with Javascript and dom, I really wanted to learn other languages. But since the online class was about to start, I stopped it for a while. Combine it with the fact that I got very distracted by anime. I just continued it in November.
+
+---
+### Summary
+* I learned programming concepts such as:
+	1. variables
+	2. functions
+	3. objects
+	4. Website styling and markup
+* I familiarized with programming notations in javascript and python
+
+---
+ **Stay tuned for part 2**.
