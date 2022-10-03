@@ -27,6 +27,13 @@ import "../styles/globals.css";
       durationReadInMins={frontmatter.durationReadInMins}
       imageURL={frontmatter.imageURL}
     />
+    <link
+      rel="preload"
+      href="/Inter-VariableFont_slnt,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <Navbar client:load />

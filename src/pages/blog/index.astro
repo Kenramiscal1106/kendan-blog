@@ -25,6 +25,13 @@ const blogFrontmatter = blogPosts.map(
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SetTheme />
+    <link
+      rel="preload"
+      href="/Inter-VariableFont_slnt,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <Navbar activeTab={"blog"} client:load />
