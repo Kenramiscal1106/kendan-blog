@@ -6,6 +6,7 @@
 	font-family: "Inter hosted";
 	src: url("/Inter-VariableFont_slnt,wght.ttf");
 	font-weight: 100 900;
+	font-display: optional;
 }
 @layer base{
 	* {
