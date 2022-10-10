@@ -4,13 +4,18 @@
 
 @font-face {
 	font-family: "Inter hosted";
-	src: url("/Inter-VariableFont_slnt,wght.ttf");
+	src: url("/Inter.var.woff2") format("woff2");
 	font-weight: 100 900;
-	font-display: optional;
+	font-display: swap;
 }
 @layer base{
 	* {
 		@apply text-light-content dark:text-dark-content font-inter selection:text-light-accent selection:bg-light-accent selection:bg-opacity-10 dark:selection:text-dark-accent ;
+	}
+	html, body {
+		margin:0;
+		min-width: 100vw;
+		min-height: 100vh;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		@apply font-bold;
