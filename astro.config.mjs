@@ -14,7 +14,7 @@ export default defineConfig({
     svelte(),
   ],
   server: {
-    port: 8080,
+    port: 5050,
   },
   markdown: {
     shikiConfig: {
