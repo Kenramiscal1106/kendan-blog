@@ -1,0 +1,15 @@
+---
+export interface Props {
+  src: string;
+  type: string;
+}
+const { src, type } = Astro.props;
+---
+
+<link
+  rel="preload"
+  href={src}
+  as="font"
+  type={"font/" + type}
+  crossorigin="anonymous"
+/>
