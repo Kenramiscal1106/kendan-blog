@@ -1,8 +1,24 @@
 ---
+import HomeArticle from "@components/HomeArticle.astro";
 import Navbar from "@components/Navbar.svelte";
+import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
 import "../styles/globals.css";
-const recentBlogs = await Astro.glob("../pages/blog/*.md");
+const blogs = await Astro.glob("../pages/blog/*.md");
+const recentBlogs = blogs
+  .sort(
+    (a, b) =>
+      Date.parse(b.frontmatter.createdAt) - Date.parse(a.frontmatter.createdAt)
+  )
+  .slice(undefined, 3)
+  .map((value) => ({ ...value.frontmatter, url: value.url })) as {
+  title: string;
+  createdAt: string;
+  description: string;
+  durationReadInMins: number;
+  imageURL: string;
+  url: string;
+}[];
 ---
 
 <html lang="en">
@@ -14,13 +30,7 @@ const recentBlogs = await Astro.glob("../pages/blog/*.md");
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SetTheme />
-    <link
-      rel="preload"
-      href="/Inter-VariableFont_slnt,wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin="anonymous"
-    />
+    <PreloadCustomFont src="/Inter.var.woff2" type="woff2" />
   </head>
   <body>
     <Navbar client:load />
@@ -51,13 +61,15 @@ const recentBlogs = await Astro.glob("../pages/blog/*.md");
           </div>
         </div>
       </div>
-      <div class="mt-5">
+      <div class="mt-5 max-w-lg mx-auto">
         <h3
           class="bg-gradient-to-br from-cus-blue-light to-cus-blue-dark bg-clip-text text-transparent text-center"
         >
           Recent posts
-          <!-- {recentBlogs.map((blog) => <h4>{blog.frontmatter.title}</h4>)} -->
         </h3>
+        <div class="flex items-center">
+          {recentBlogs.map((blog) => <HomeArticle {...blog} />)}
+        </div>
       </div>
     </main>
   </body>
