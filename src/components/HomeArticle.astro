@@ -1,0 +1,32 @@
+---
+export interface Props {
+  title: string;
+  createdAt: string;
+  description: string;
+  durationReadInMins: number;
+  imageURL: string;
+  url: string;
+}
+
+const { title, createdAt, url, durationReadInMins, imageURL } = Astro.props;
+const date = new Intl.DateTimeFormat("en-PH", {
+  dateStyle: "medium",
+}).format(new Date(createdAt));
+const altText = imageURL.split("-").join(" ");
+---
+
+<section
+  class="aspect-[2/1] px-3 py-2 relative overflow-hidden flex-1 rounded-md"
+>
+  <a href={url}>
+    <img
+      src={imageURL}
+      alt={altText}
+      class="absolute left-0 top-0 h-auto w-full z-10"
+    />
+    <div class="absolute left-0 top-0 z-20 px-3 py-2">
+      <h4 class="text-white">{title}</h4>
+      <div class="text-white">{date} | {durationReadInMins} mins read</div>
+    </div>
+  </a>
+</section>
