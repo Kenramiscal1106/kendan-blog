@@ -1,6 +1,7 @@
 ---
 import BlogArticle from "@components/BlogArticle.astro";
 import Navbar from "@components/Navbar.svelte";
+import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
 import "../../styles/globals.css";
 const blogPosts = await Astro.glob("./*.md");
@@ -25,13 +26,7 @@ const blogFrontmatter = blogPosts.map(
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SetTheme />
-    <link
-      rel="preload"
-      href="/Inter-VariableFont_slnt,wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin="anonymous"
-    />
+    <PreloadCustomFont src="/Inter.var.woff2" type="woff2" />
   </head>
   <body>
     <Navbar activeTab={"blog"} client:load />
