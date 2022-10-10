@@ -11,6 +11,7 @@ export interface Props {
 const { frontmatter } = Astro.props;
 import GenerateOgTag from "@components/GenerateOgTag.astro";
 import Navbar from "@components/Navbar.svelte";
+import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
 import "../styles/globals.css";
 ---
@@ -27,13 +28,7 @@ import "../styles/globals.css";
       durationReadInMins={frontmatter.durationReadInMins}
       imageURL={frontmatter.imageURL}
     />
-    <link
-      rel="preload"
-      href="/Inter-VariableFont_slnt,wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin="anonymous"
-    />
+    <PreloadCustomFont src="/Inter.var.woff2" type="woff2" />
   </head>
   <body>
     <Navbar client:load />
