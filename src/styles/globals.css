@@ -14,8 +14,8 @@
 	}
 	html, body {
 		margin:0;
+		padding:0;
 		min-width: 100vw;
-		min-height: 100vh;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		@apply font-bold;
@@ -50,4 +50,13 @@
 }
 .markdown a {
 	@apply underline text-light-accent dark:text-dark-accent;
+}
+.markdown ul {
+	@apply list-disc pl-8 list-inside;
+}
+.markdown ol {
+	@apply pl-8 list-decimal list-inside;
+}
+.markdown ul > * {
+	@apply my-2;
 }
