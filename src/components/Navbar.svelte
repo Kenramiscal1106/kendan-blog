@@ -1,22 +1,15 @@
 <script lang="ts">
   import NavItem from "./NavItem.svelte";
   import ThemeToggle from "./ThemeToggle.svelte";
-  export let activeTab: "home" | "about" | "blog" = "home";
+  export let activeTab: "home" | "about" | "blog" | undefined = undefined;
 </script>
 
 <header
   class="fixed top-0 w-full p-3  bg-light-primary dark:bg-dark-primary bg-opacity-60 dark:bg-opacity-60 backdrop-blur-sm "
 >
   <nav class="flex items-center gap-4 max-w-4xl mx-auto">
-    <div>
-      <a
-        href="/"
-        class="text-light-accent dark:text-dark-accent font-bold text-[1.1rem]"
-      >
-        Ken Ramiscal
-      </a>
-    </div>
     <div class="flex gap-2">
+      <NavItem isActive={activeTab === "home"} navigateTo="/">Home</NavItem>
       <NavItem isActive={activeTab === "about"} navigateTo="/about"
         >About</NavItem
       >
