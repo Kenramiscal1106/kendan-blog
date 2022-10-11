@@ -6,16 +6,12 @@ export interface Props {
   imageURL: string;
 }
 const { description, durationReadInMins, imageURL, title } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin);
-const metaImageURL = imageURL.includes("https://")
-  ? imageURL
-  : new URL(imageURL, Astro.url);
-
+const canonicalURL = new URL(Astro.url.pathname, "https://kendan.vercel.app");
 const domain = Astro.url.host;
 ---
 
 <meta property="og:url" content={canonicalURL.href} />
-<meta property="og:image" content={metaImageURL} />
+<meta property="og:image" content={imageURL} />
 <meta property="og:type" content="article" />
 <meta property="og:title" content={title} />
 <meta
@@ -31,4 +27,4 @@ const domain = Astro.url.host;
   name="twitter:description"
   content={description + " | " + durationReadInMins + "mins read"}
 />
-<meta name="twitter:image" content={metaImageURL} />
+<meta name="twitter:image" content={imageURL} />
