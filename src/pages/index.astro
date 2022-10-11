@@ -35,7 +35,7 @@ const recentBlogs = blogs
   </head>
   <body>
     <Navbar client:load />
-    <main class="mt-20">
+    <main class="mt-20 max-w-3xl mx-auto">
       <div class="flex gap-7 items-center m-auto justify-center">
         <div>
           <h1
@@ -64,11 +64,11 @@ const recentBlogs = blogs
       </div>
       <div class="mt-5 mx-auto p-5">
         <h3
-          class="bg-gradient-to-br from-cus-blue-light to-cus-blue-dark bg-clip-text text-transparent text-center"
+          class="bg-gradient-to-br from-cus-blue-light to-cus-blue-dark bg-clip-text text-transparent text-center my-4"
         >
           Recent posts
         </h3>
-        <div class="flex items-center">
+        <div class="flex items-center mx-auto space-x-3">
           {recentBlogs.map((blog) => <HomeArticle {...blog} />)}
         </div>
       </div>
