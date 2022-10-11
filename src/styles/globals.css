@@ -15,7 +15,6 @@
 	html, body {
 		margin:0;
 		padding:0;
-		min-width: 100vw;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		@apply font-bold;
@@ -30,7 +29,7 @@
 		@apply bg-light-primary dark:bg-dark-primary;
 	}
 	hr {
-		@apply border-t-2 border-t-light-secondary dark:border-t-dark-secondary border-opacity-20;
+		@apply border-t-2 border-t-light-secondary dark:border-t-dark-secondary border-opacity-60;
 	}
 }
 .markdown > p {
