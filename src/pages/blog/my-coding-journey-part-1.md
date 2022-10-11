@@ -77,6 +77,5 @@ And when I got frustrated with Javascript and dom, I really wanted to learn othe
 	3. objects
 	4. Website styling and markup
 * I familiarized with programming notations in javascript and python
-
 ---
- **Stay tuned for part 2**.
+Click this [link](/blog/my-coding-journey-part-2) for part 2
