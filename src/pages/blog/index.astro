@@ -24,6 +24,7 @@ const blogFrontmatter = blogPosts.map(
       name="description"
       content="Ken Ramiscal's blog post lives here. You can find his blogs in this page."
     />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SetTheme />
     <PreloadCustomFont src="/Inter.var.woff2" type="woff2" />
@@ -31,7 +32,7 @@ const blogFrontmatter = blogPosts.map(
   <body>
     <Navbar activeTab={"blog"} client:load />
     <main class="mt-20">
-      <div class="flex flex-col gap-3 md:w-max mx-auto">
+      <div class="flex flex-col space-y-5 md:w-max mx-auto">
         {blogFrontmatter.map((blogPost) => <BlogArticle {...blogPost} />)}
       </div>
     </main>
