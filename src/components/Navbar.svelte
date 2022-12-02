@@ -10,9 +10,6 @@
   <nav class="flex items-center gap-4 max-w-4xl mx-auto">
     <div class="flex gap-2">
       <NavItem isActive={activeTab === "home"} navigateTo="/">Home</NavItem>
-      <NavItem isActive={activeTab === "about"} navigateTo="/about"
-        >About</NavItem
-      >
       <NavItem isActive={activeTab === "blog"} navigateTo="/blog">Blog</NavItem>
     </div>
     <div class="flex gap-3 ml-auto">
