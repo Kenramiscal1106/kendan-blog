@@ -13,5 +13,9 @@
     "@astrojs/tailwind": "^1.0.0",
     "astro": "^1.2.1",
     "svelte": "^3.50.1"
+  },
+  "dependencies": {
+    "@astrojs/image": "^0.12.1",
+    "sharp": "^0.31.2"
   }
 }
