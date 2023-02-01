@@ -33,7 +33,7 @@
 	}
 }
 .markdown > p {
-	@apply my-4;
+	@apply my-4 text-sm;
 }
 .markdown > h2, .markdown > h3, .markdown > h4, .markdown > h5, .markdown > h6 {
 	@apply my-4;
