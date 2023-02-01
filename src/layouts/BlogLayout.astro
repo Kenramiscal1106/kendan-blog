@@ -1,12 +1,12 @@
 ---
 export interface Props {
-frontmatter: {
-title: string;
-createdAt: string;
-description: string;
-durationReadInMins: number;
-imageURL: string;
-};
+  frontmatter: {
+    title: string;
+    createdAt: string;
+    description: string;
+    durationReadInMins: number;
+    imageURL: string;
+  };
 }
 const { frontmatter } = Astro.props;
 import GenerateOgTag from "@components/GenerateOgTag.astro";
@@ -14,41 +14,48 @@ import Navbar from "@components/Navbar.svelte";
 import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
 import "../styles/globals.css";
-import {Image} from "@astrojs/image/components"
+import { Image } from "@astrojs/image/components";
 ---
 
 <html lang="en">
-<head>
+  <head>
     <title>{frontmatter.title} | Ken Ramiscal</title>
-    <meta name="description" content={frontmatter.description}/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <SetTheme/>
+    <meta name="description" content={frontmatter.description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SetTheme />
     <GenerateOgTag
-            title={frontmatter.title}
-            description={frontmatter.description}
-            durationReadInMins={frontmatter.durationReadInMins}
-            imageURL={frontmatter.imageURL}
+      title={frontmatter.title}
+      description={frontmatter.description}
+      durationReadInMins={frontmatter.durationReadInMins}
+      imageURL={frontmatter.imageURL}
     />
-    <link rel="shortcut icon" href="/Icon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/Icon.png" type="image/x-icon" />
     <!--    <PreloadCustomFont src="/Inter.var.woff2" type="woff2" />-->
-</head>
-<body class="font-['Inter_var']">
-<Navbar client:load/>
-<main class="mt-20">
-    <h1 class="text-center font-extrabold">{frontmatter.title}</h1>
-    <div
-            class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
-    >
+  </head>
+  <body class="font-['Inter_var']">
+    <Navbar client:load />
+    <main class="mt-20">
+      <h1 class="text-center font-extrabold">{frontmatter.title}</h1>
+      <div
+        class="text-center text-light-content-secondary dark:text-dark-content-secondary text-[14px]"
+      >
         {frontmatter.createdAt} • {
-        frontmatter.durationReadInMins + " mins read"
+          frontmatter.durationReadInMins + " mins read"
         }
-    </div>
-    <Image src={frontmatter.imageURL} alt="main blog image" class="my-4 mx-auto rounded-xl" width={768} aspectRatio="2:1" fit="cover"/>
-    <!-- <img src={frontmatter.imageURL} alt="main blog image" class="max-w-" /> -->
-    <article class="markdown max-w-3xl m-auto">
-        <hr/>
-        <slot/>
-    </article>
-</main>
-</body>
+      </div>
+      <Image
+        src={frontmatter.imageURL}
+        alt="main blog image"
+        class="my-4 mx-auto rounded-xl"
+        width={768}
+        aspectRatio="2:1"
+        fit="cover"
+      />
+      <!-- <img src={frontmatter.imageURL} alt="main blog image" class="max-w-" /> -->
+      <article class="markdown max-w-3xl m-auto">
+        <hr />
+        <slot />
+      </article>
+    </main>
+  </body>
 </html>
