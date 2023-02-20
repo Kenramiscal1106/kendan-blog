@@ -15,7 +15,7 @@
     "svelte": "^3.55.1"
   },
   "dependencies": {
-    "@astrojs/image": "^0.12.1",
+    "@astrojs/image": "^0.15.0",
     "sharp": "^0.31.3"
   }
 }
