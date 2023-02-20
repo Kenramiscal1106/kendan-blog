@@ -3,7 +3,7 @@ layout: "@layouts/BlogLayout.astro"
 title: Sveltekit journey to 1.0
 createdAt: February 19 2023
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis
-durationReadInMins: 5
+durationReadInMins: 7
 imageURL: /assets/blog/sveltekit-journey-1.png
 ---
 
