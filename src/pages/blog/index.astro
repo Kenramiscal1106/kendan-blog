@@ -3,11 +3,12 @@ import BlogArticle from "@components/BlogArticle.astro";
 import Navbar from "@components/Navbar.svelte";
 import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
+import { getCollection } from "astro:content";
 import "../../styles/globals.css";
-const blogPosts = await Astro.glob("./*.md");
+const blogPosts = await getCollection("blog");
 const blogFrontmatter = blogPosts.map(
   (blogPost) =>
-    blogPost.frontmatter as {
+    blogPost.data satisfies {
       title: string;
       createdAt: string;
       description: string;

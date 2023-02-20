@@ -3,15 +3,16 @@ import HomeArticle from "@components/HomeArticle.astro";
 import Navbar from "@components/Navbar.svelte";
 import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
+import { getCollection } from "astro:content";
 import "../styles/globals.css";
-const blogs = await Astro.glob("../pages/blog/*.md");
+const blogs = await getCollection("blog");
 const recentBlogs = blogs
   .sort(
     (a, b) =>
-      Date.parse(b.frontmatter.createdAt) - Date.parse(a.frontmatter.createdAt)
+      Date.parse(b.data.createdAt) - Date.parse(a.data.createdAt)
   )
   .slice(undefined, 3)
-  .map((value) => ({ ...value.frontmatter, url: value.url })) as {
+  .map((value) => ({ ...value.data, url: `/blog/${value.slug}` })) satisfies {
   title: string;
   createdAt: string;
   description: string;
