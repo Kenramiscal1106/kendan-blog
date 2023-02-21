@@ -2,7 +2,7 @@
 layout: "@layouts/BlogLayout.astro"
 title: My coding Journey (part 3)
 createdAt: February 1 2023
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis
+description: 3rd year of my coding journey.
 durationReadInMins: 5
 imageURL: /assets/blog/my-coding-journey-1.png
 ---
