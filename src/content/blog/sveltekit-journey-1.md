@@ -39,18 +39,18 @@ In a `.svelte` file, this is what it would look like:
 
 ```svelte
 <script context="module">
-	export const load = () => {
-		let propName = "arbitrary data"
-			return {
-				props: {
-					propName
-			}
-		}
-	}
+  export const load = () => {
+    let propName = "arbitrary data"
+    return {
+      props: {
+        propName
+      }
+    }
+  }
 </script>
 
 <script>
-	export let propName
+  export let propName
 </script>
 
 <h1>Use the {propName}</h1>
