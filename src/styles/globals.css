@@ -8,54 +8,112 @@
 	font-weight: 100 900;
 	font-display: swap;
 }
-@layer base{
+
+@layer base {
 	* {
-		@apply text-light-content dark:text-dark-content font-inter selection:text-light-accent selection:bg-light-accent selection:bg-opacity-10 dark:selection:text-dark-accent ;
+		@apply text-light-content dark:text-dark-content font-inter selection:text-light-accent selection:bg-light-accent selection:bg-opacity-10 dark:selection:text-dark-accent;
 	}
-	html, body {
-		margin:0;
-		padding:0;
+
+	html,
+	body {
+		margin: 0;
+		padding: 0;
 	}
-	h1, h2, h3, h4, h5, h6 {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		@apply font-bold;
 	}
-	h1 {@apply text-4xl;}
-	h2 {@apply text-3xl;}
-	h3 {@apply text-2xl;}
-	h4 {@apply text-xl;}
-	h5 {@apply text-lg;}
-	p, h6 {@apply text-base;}
+
+	h1 {
+		@apply text-4xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+
+	h4 {
+		@apply text-xl;
+	}
+
+	h5 {
+		@apply text-lg;
+	}
+
+	p,
+	h6, table, li {
+		@apply text-base;
+	}
+
 	body {
 		@apply bg-light-primary dark:bg-dark-primary;
 	}
+
 	hr {
 		@apply border-t-2 border-t-light-secondary dark:border-t-dark-secondary border-opacity-60;
 	}
 }
-.markdown > p {
-	@apply my-4 text-sm;
+
+pre.astro-code {
+	@apply selection:text-neutral-200 selection:bg-neutral-500 selection:bg-opacity-20
 }
-.markdown > h2, .markdown > h3, .markdown > h4, .markdown > h5, .markdown > h6 {
+
+.markdown p, .markdown li, .markdown tr {
+	@apply text-sm;
+}
+.markdown p {
+	@apply my-4
+}
+.markdown>h2,
+.markdown>h3,
+.markdown>h4,
+.markdown>h5,
+.markdown>h6 {
 	@apply my-4;
 }
-.markdown > pre code * {
+
+.markdown>pre code * {
 	@apply font-["Cascadia_Code",_monospace] text-sm;
 }
-.markdown > pre {
+
+.markdown>pre {
 	@apply px-4 py-2 rounded-md my-4;
 }
-.markdown > *:not(pre) code {
+
+.markdown>*:not(pre) code {
 	@apply px-1 rounded-sm bg-light-secondary dark:bg-dark-secondary;
 }
+
 .markdown a {
 	@apply underline text-light-accent dark:text-dark-accent;
 }
+
 .markdown ul {
 	@apply list-disc pl-8 list-inside;
 }
+
 .markdown ol {
 	@apply pl-8 list-decimal list-inside;
 }
-.markdown ul > * {
-	@apply my-2;
+
+.markdown ul {
+	@apply my-4;
+}
+.markdown :is(table, th, td) {
+	@apply border-light-secondary dark:border-neutral-700 my-4 border-collapse border;
+}
+.markdown th {
+	@apply bg-neutral-100 dark:bg-neutral-800;
+}
+.markdown :is(th, td) {
+	@apply px-3 py-1
 }
