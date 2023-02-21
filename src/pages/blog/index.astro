@@ -6,16 +6,10 @@ import SetTheme from "@components/SetTheme.astro";
 import { getCollection } from "astro:content";
 import "../../styles/globals.css";
 const blogPosts = await getCollection("blog");
-const blogFrontmatter = blogPosts.map(
-  (blogPost) =>
-    blogPost.data satisfies {
-      title: string;
-      createdAt: string;
-      description: string;
-      durationReadInMins: number;
-      imageURL: string;
-    }
-);
+const blogFrontmatter = blogPosts.map((blogPost) => ({
+  data: blogPost.data,
+  slug: blogPost.slug,
+}));
 ---
 
 <html lang="en">
@@ -34,7 +28,11 @@ const blogFrontmatter = blogPosts.map(
     <Navbar activeTab={"blog"} client:load />
     <main class="mt-20">
       <div class="flex flex-col space-y-5 md:w-max max-w-3xl mx-auto">
-        {blogFrontmatter.map((blogPost) => <BlogArticle {...blogPost} />)}
+        {
+          blogFrontmatter.map((blogPost) => (
+            <BlogArticle data={blogPost.data} slug={blogPost.slug} />
+          ))
+        }
       </div>
     </main>
   </body>
