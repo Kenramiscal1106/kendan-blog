@@ -4,22 +4,13 @@ import Navbar from "@components/Navbar.svelte";
 import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
 import { getCollection } from "astro:content";
+import { Image } from "@astrojs/image/components";
 import "../styles/globals.css";
 const blogs = await getCollection("blog");
 const recentBlogs = blogs
-  .sort(
-    (a, b) =>
-      Date.parse(b.data.createdAt) - Date.parse(a.data.createdAt)
-  )
+  .sort((a, b) => Date.parse(b.data.createdAt) - Date.parse(a.data.createdAt))
   .slice(undefined, 3)
-  .map((value) => ({ ...value.data, url: `/blog/${value.slug}` })) satisfies {
-  title: string;
-  createdAt: string;
-  description: string;
-  durationReadInMins: number;
-  imageURL: string;
-  url: string;
-}[];
+  .map((value) => ({ ...value.data, url: `/blog/${value.slug}` }));
 ---
 
 <html lang="en">
@@ -57,10 +48,12 @@ const recentBlogs = blogs
             making people realize that coding is fun and you should try it.
           </div>
         </div>
-        <img
+        <Image
           src="/assets/profile.png"
-          class="max-w-[250px] rounded-[100%]"
+          width={200}
+          aspectRatio="1:1"
           alt="profile"
+          class="rounded-full"
         />
       </div>
       <div class="mt-5 mx-auto p-5">
