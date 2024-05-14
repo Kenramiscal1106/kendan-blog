@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 export interface Props {
   data: CollectionEntry<"blog">["data"];
@@ -21,8 +21,7 @@ const date = new Intl.DateTimeFormat("en-PH", {
       src={imageURL}
       alt={"main blog image" + title}
       width={200}
-      aspectRatio="2:1"
-      fit="cover"
+      height={400}
       class="rounded-md"
     />
     <div>

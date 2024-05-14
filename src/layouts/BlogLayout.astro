@@ -14,7 +14,7 @@ import Navbar from "@components/Navbar.svelte";
 import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
 import "../styles/globals.css";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 ---
 
 <html lang="en">
@@ -48,8 +48,7 @@ import { Image } from "@astrojs/image/components";
         alt="main blog image"
         class="my-4 mx-auto rounded-xl"
         width={768}
-        aspectRatio="2:1"
-        fit="cover"
+        height={768*2}
       />
       <article class="markdown max-w-3xl m-auto">
         <hr />

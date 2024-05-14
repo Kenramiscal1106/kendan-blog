@@ -9,13 +9,14 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/svelte": "^2.0.1",
-    "@astrojs/tailwind": "^3.0.1",
-    "astro": "^2.0.14",
-    "svelte": "^3.55.1"
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.8.3",
+    "svelte": "^4.2.16"
   },
   "dependencies": {
-    "@astrojs/image": "^0.15.0",
-    "sharp": "^0.31.3"
+    "@astrojs/svelte": "^5.4.0",
+    "sharp": "^0.31.3",
+    "svelte-inview": "^4.0.2",
+    "typescript": "^5.4.5"
   }
 }

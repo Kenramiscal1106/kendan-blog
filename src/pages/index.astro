@@ -4,8 +4,9 @@ import Navbar from "@components/Navbar.svelte";
 import PreloadCustomFont from "@components/PreloadCustomFont.astro";
 import SetTheme from "@components/SetTheme.astro";
 import { getCollection } from "astro:content";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import "../styles/globals.css";
+import profile from "../assets/profile.png"
 const blogs = await getCollection("blog");
 const recentBlogs = blogs
   .sort((a, b) => Date.parse(b.data.createdAt) - Date.parse(a.data.createdAt))
@@ -49,9 +50,9 @@ const recentBlogs = blogs
           </div>
         </div>
         <Image
-          src="/assets/profile.png"
+          src={profile}
           width={200}
-          aspectRatio="1:1"
+          height={200}
           alt="profile"
           class="rounded-full"
         />
